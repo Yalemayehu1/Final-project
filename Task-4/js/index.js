@@ -18,6 +18,7 @@ newTaskForm.addEventListener('submit', (event) => {
     const description = newTaskDescription.value; //it pass a function  name called description
     const assignedTo = newTaskAssignedTo.value;
     const dueDate = newTaskDueDate.value;
+
     if (!validFormFieldInput(name)) {
         //a function for the input text to check if it is valid, invalid or error.
         errorMessage.innerHTML = "Invalid name input";
@@ -25,7 +26,13 @@ newTaskForm.addEventListener('submit', (event) => {
     } else {
         errorMessage.style.display = "none"
     }
+    // if (!name || !description || !assignedTo || !dueDate) {
+    //     alert('You are missing a section!');
+    // }
+
+
     taskManager.addTask(name, description, assignedTo, dueDate)
+
     newTaskNameInput.value = ''
     newTaskDescription.value = ''
     newTaskAssignedTo.value = ''
