@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
@@ -11,12 +15,14 @@
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
       crossorigin="anonymous"
     />
+
     <title>Task List</title>
   </head>
+
   <body>
     <div class="container">
       <h1 class="my-5">Task List</h1>
-      <div class="row">
+      <div class="row mb-5">
         <div class="col">
           <h2>New Task</h2>
           <form id="newTaskForm">
@@ -26,7 +32,13 @@
             </div>
             <div class="form-group">
               <label for="newTaskDescription">Description</label>
-              <input type="text" class="form-control" id="newTaskDescription" />
+              <textarea
+                type="text"
+                class="form-control"
+                id="newTaskDescription"
+              ></textarea>
+            </div>
+            <div class="form-row">
               <div class="form-group col">
                 <label for="newTaskAssignedTo">Assigned To</label>
                 <input
@@ -39,16 +51,39 @@
                 <label for="newTaskDueDate">Due Date</label>
                 <input type="date" class="form-control" id="newTaskDueDate" />
               </div>
-              <div id="alertMessage" style="display: none;" class="alert alert-danger" role="alert">Error Message</div>
-              <button type="submit" class="btn btn-primary btn-block">Add Task</button>
-              <div id="alertMessage" style="display: none" class="alert alert-danger" role="alert">
-                Error message    
-                </div>
-
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">
+              Add Task
+            </button>
+            <div id="alert" class="alert alert-primary" role="alert">
+              A simple primary alert—check it out!
+            </div>
           </form>
         </div>
       </div>
+      <div class="row">
+        <div class="col">
+          <h2>Tasks</h2>
+          <ul class="list-group" id="tasksList">
+            <li class="list-group-item">
+              <div
+                class="d-flex w-100 mt-2 justify-content-between align-items-center"
+              >
+                <h5>Take out trash</h5>
+                <span class="badge badge-danger">TODO</span>
+              </div>
+              <div class="d-flex w-100 mb-3 justify-content-between">
+                <small>Assigned To: Nick</small>
+                <small>Due: 20/09/2020</small>
+              </div>
+              <p>Take out the trash to the front of the house</p>
+            </li>
+          </ul>
+        </div>
+        <div class="col"></div>
+      </div>
     </div>
+
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -65,7 +100,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="js/taskmanager.js"></script>
+    <script src="js/TaskManager.js"></script>
     <script src="js/index.js"></script>
   </body>
 </html>
