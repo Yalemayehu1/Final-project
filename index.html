@@ -7,7 +7,6 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
@@ -15,10 +14,8 @@
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
       crossorigin="anonymous"
     />
-
     <title>Task List</title>
   </head>
-
   <body>
     <div class="container">
       <h1 class="my-5">Task List</h1>
@@ -55,35 +52,17 @@
             <button type="submit" class="btn btn-primary btn-block">
               Add Task
             </button>
-            <div id="alert" class="alert alert-primary" role="alert">
-              A simple primary alert—check it out!
-            </div>
           </form>
         </div>
       </div>
       <div class="row">
         <div class="col">
           <h2>Tasks</h2>
-          <ul class="list-group" id="tasksList">
-            <li class="list-group-item">
-              <div
-                class="d-flex w-100 mt-2 justify-content-between align-items-center"
-              >
-                <h5>Take out trash</h5>
-                <span class="badge badge-danger">TODO</span>
-              </div>
-              <div class="d-flex w-100 mb-3 justify-content-between">
-                <small>Assigned To: Nick</small>
-                <small>Due: 20/09/2020</small>
-              </div>
-              <p>Take out the trash to the front of the house</p>
-            </li>
-          </ul>
+          <ul class="list-group" id="tasksList"></ul>
         </div>
         <div class="col"></div>
       </div>
     </div>
-
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -99,7 +78,6 @@
       integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
       crossorigin="anonymous"
     ></script>
-
     <script src="js/TaskManager.js"></script>
     <script src="js/index.js"></script>
   </body>
